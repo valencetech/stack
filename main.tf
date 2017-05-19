@@ -37,7 +37,7 @@ variable "domain_name_servers" {
 
 variable "region" {
   description = "the AWS region in which resources are created, you must set the availability_zones variable as well if you define this value to something other than the default"
-  default     = "us-west-2"
+  default     = "eu-west-2"
 }
 
 variable "cidr" {
@@ -47,7 +47,7 @@ variable "cidr" {
 
 variable "internal_subnets" {
   description = "a list of CIDRs for internal subnets in your VPC, must be set if the cidr variable is defined, needs to have as many elements as there are availability zones"
-  default     = ["10.30.0.0/19" ,"10.30.64.0/19", "10.30.128.0/19"]
+  default     = ["10.30.0.0/19" ,"10.30.64.0/19"]
 }
 
 variable "external_subnets" {
@@ -57,7 +57,7 @@ variable "external_subnets" {
 
 variable "availability_zones" {
   description = "a comma-separated list of availability zones, defaults to all AZ of the region, if set to something other than the defaults, both internal_subnets and external_subnets have to be defined as well"
-  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  default     = ["eu-west-2a", "eu-west-2b"]
 }
 
 variable "bastion_instance_type" {
