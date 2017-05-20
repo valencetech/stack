@@ -26,7 +26,7 @@ variable "default_ecs_ami" {
   default = {
     us-east-1      = "ami-dde4e6ca"
     us-west-1      = "ami-6d21770d"
-    us-west-2      = "ami-97da70f7"
+    eu-west-2      = "ami-b6daced2"
     eu-west-1      = "ami-c41f3bb7"
     eu-central-1   = "ami-4ba16024"
     ap-northeast-1 = "ami-90ea86f7"
@@ -41,7 +41,7 @@ variable "default_ecs_ami" {
 variable "default_log_account_ids" {
   default = {
     us-east-1      = "127311923021"
-    us-west-2      = "797873946194"
+    eu-west-2      = "652711504416"
     us-west-1      = "027434742980"
     eu-west-1      = "156460612806"
     eu-central-1   = "054676820928"

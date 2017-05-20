@@ -52,7 +52,7 @@ variable "internal_subnets" {
 
 variable "external_subnets" {
   description = "a list of CIDRs for external subnets in your VPC, must be set if the cidr variable is defined, needs to have as many elements as there are availability zones"
-  default     = ["10.30.32.0/20", "10.30.96.0/20", "10.30.160.0/20"]
+  default     = ["10.30.32.0/20", "10.30.96.0/20"]
 }
 
 variable "availability_zones" {

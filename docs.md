@@ -40,7 +40,7 @@ Usage:
 | key_name | the name of the ssh key to use, e.g. "internal-key" | - | yes |
 | domain_name | the internal DNS name to use with services | `stack.local` | no |
 | domain_name_servers | the internal DNS servers, defaults to the internal route53 server of the VPC | `` | no |
-| region | the AWS region in which resources are created, you must set the availability_zones variable as well if you define this value to something other than the default | `us-west-2` | no |
+| region | the AWS region in which resources are created, you must set the availability_zones variable as well if you define this value to something other than the default | `eu-west-2` | no |
 | cidr | the CIDR block to provision for the VPC, if set to something other than the default, both internal_subnets and external_subnets have to be defined as well | `10.30.0.0/16` | no |
 | internal_subnets | a list of CIDRs for internal subnets in your VPC, must be set if the cidr variable is defined, needs to have as many elements as there are availability zones | `<list>` | no |
 | external_subnets | a list of CIDRs for external subnets in your VPC, must be set if the cidr variable is defined, needs to have as many elements as there are availability zones | `<list>` | no |
@@ -99,7 +99,7 @@ Usage:
 
     module "bastion" {
       source            = "github.com/segmentio/stack/bastion"
-      region            = "us-west-2"
+      region            = "eu-west-2"
       security_groups   = "sg-1,sg-2"
       vpc_id            = "vpc-12"
       key_name          = "ssh-key"
@@ -114,7 +114,7 @@ Usage:
 | Name | Description | Default | Required |
 |------|-------------|:-----:|:-----:|
 | instance_type | Instance type, see a list at: https://aws.amazon.com/ec2/instance-types/ | `t2.micro` | no |
-| region | AWS Region, e.g us-west-2 | - | yes |
+| region | AWS Region, e.g eu-west-2 | - | yes |
 | security_groups | a comma separated lists of security group IDs | - | yes |
 | vpc_id | VPC ID | - | yes |
 | key_name | The SSH key pair, key name | - | yes |
@@ -224,7 +224,7 @@ Usage:
        key_name             = "ssh-key"
        security_groups      = "1,2"
        iam_instance_profile = "id"
-       region               = "us-west-2"
+       region               = "eu-west-2"
        availability_zones   = ["a", "b"]
        instance_type        = "t2.small"
      }
